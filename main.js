@@ -76,19 +76,17 @@ function applyFilter(event,filter) {
 
 
 
-// <![CDATA[
+/*****************************
+*JavaScript Love Heart Cursor*
+*****************************/
 var colours=new Array('#f00', '#f06', '#f0f', '#f6f', '#f39', '#f9c'); // colours of the hearts
 var minisize=10; // smallest size of hearts in pixels
 var maxisize=20; // biggest size of hearts in pixels
 var hearts=100; // maximum number of hearts on screen
 var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
 
-/*****************************
-*JavaScript Love Heart Cursor*
-*  (c)2013+ mf2fm web-design *
-*   http://www.mf2fm.com/rv  *
-*  DON'T EDIT BELOW THIS BOX *
-*****************************/
+
+
 var x=ox=400;
 var y=oy=300;
 var swide=800;
@@ -250,4 +248,9 @@ function createDiv(height, width) {
   div.style.backgroundColor="transparent";
   return (div);
 }
-// ]]>
+
+window.addEventListener('load', function () {
+  document.querySelector(".loader-wrapper").style.opacity = "0";
+  document.querySelector(".loader-wrapper").style.display = "none";
+  document.querySelector(".body-wrapper").style.display = "block";
+})

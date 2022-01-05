@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Kaushan+Script&family=Moo+Lah+Lah&family=Rock+3D&display=swap');
 
 .body-wrapper {
+    display: none;
     position:absolute;
     padding:0;
     margin:0;
@@ -205,6 +206,88 @@ body .card {
     font-size: 30px;
     color: #ffffff34;
 }
+
+.loader-wrapper {
+    height: 100vh;
+    align-items: center;
+    background-color: #ecd2fe87;;
+    display: flex;
+    justify-content: center;
+    transition: opacity 2s ease-in-out ;
+  }
+  
+  .loader  {
+    animation: rotate 1s infinite;  
+    height: 50px;
+    width: 50px;
+  }
+  
+  .loader:before,
+  .loader:after {   
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 20px;  
+    width: 20px;
+  }
+  .loader:before {
+    animation: ball1 1s infinite;  
+    background-color: #f3699ec9;
+    box-shadow: 30px 0 0 #d21bd8e3;
+    margin-bottom: 10px;
+  }
+  .loader:after {
+    animation: ball2 1s infinite; 
+    background-color: #75ecece3;
+    box-shadow: 30px 0 0 #914de9e3;
+  }
+  
+  @keyframes rotate {
+    0% { 
+      -webkit-transform: rotate(0deg) scale(0.8); 
+      -moz-transform: rotate(0deg) scale(0.8);
+    }
+    50% { 
+      -webkit-transform: rotate(360deg) scale(1.2); 
+      -moz-transform: rotate(360deg) scale(1.2);
+    }
+    100% { 
+      -webkit-transform: rotate(720deg) scale(0.8); 
+      -moz-transform: rotate(720deg) scale(0.8);
+    }
+  }
+  
+  @keyframes ball1 {
+    0% {
+      box-shadow: 30px 0 0 #d21bd8e3;
+    }
+    50% {
+      box-shadow: 0 0 0 #f3ab4c;
+      margin-bottom: 0;
+      -webkit-transform: translate(15px,15px);
+      -moz-transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #fa579b;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @keyframes ball2 {
+    0% {
+      box-shadow: 30px 0 0 #914de9e3;
+    }
+    50% {
+      box-shadow: 0 0 0 #914de9e3;
+      margin-top: -20px;
+      -webkit-transform: translate(15px,15px);
+      -moz-transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 #f158dde3;
+      margin-top: 0;
+    }
+  }
 @media only screen and (max-width: 768px) {
     .heri-img.img-fluid {
         max-width:200px;
