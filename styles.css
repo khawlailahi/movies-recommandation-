@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Kaushan+Script&family=Moo+Lah+Lah&family=Rock+3D&display=swap');
-body {
-    height:440vh;
-}
+
 .body-wrapper {
     position:absolute;
     padding:0;
