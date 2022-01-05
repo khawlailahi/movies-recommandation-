@@ -194,6 +194,9 @@ body .card {
 .btn-watch:hover {
     background-color: #ca14a6;
 }
+.fa-angle-double-down {
+    margin-bottom: 15px;
+}
 .fa-angle-double-down, .fa-heart {
     font-size: 40px;
     color: #ffffff5c;
