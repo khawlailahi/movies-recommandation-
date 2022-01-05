@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Kaushan+Script&family=Moo+Lah+Lah&family=Rock+3D&display=swap');
-
+body {
+    height:440vh;
+}
 .body-wrapper {
-    width:100%;
-    height:700vh;
+    position:absolute;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 440vh;
     background-color: #1fc8db;
     background-image: linear-gradient(45deg, #f158dde3, #f3699ec9, #f3699ec9, #f881d2c9 , #f881d2c9 , #d21bd8e3, #a21bd8e3,#914de9e3,#7595ece3 ,#75d0ece3 ,#75ecece3 );
     background-size: 400%;
@@ -21,13 +28,19 @@ nav.navbar {
     box-shadow: 0 8px 32px 0 rgb(54 58 112 / 27%);
     backdrop-filter: blur(10px);
 }
-nav .navbar-brand {
+nav .navbar-brand, .footer-text {
     font-family: 'Great Vibes', Arial, Helvetica, sans-serif;
     color: rgb(254 254 254) !important;
     font-size: 27px;
     font-weight: 500;
     letter-spacing: 3px;
     
+}
+.footer-text-wrapper {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
 }
 .hero-section {
     width: 70%;
@@ -104,7 +117,19 @@ nav .navbar-brand {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    row-gap: 60px;
     align-items: center;
+}
+.title-movies , .title-series {
+    box-shadow: rgb(73 99 194 / 43%) 0px 8px 22px 0px;
+    backdrop-filter: blur(10px);
+    width: 350px;
+    align-self: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border: solid 1px rgb(126 150 238 / 22%);
+    animation: float 3s ease-in-out infinite;
+    color: white;
 }
 .movies-wrapper, .series-wrapper{
     display: flex;
@@ -123,6 +148,8 @@ nav .navbar-brand {
 }
 body .card {
     background-color: #ffffff61;
+    box-shadow: rgb(31 38 135 / 12%) 0px 8px 32px 0px;
+    backdrop-filter: blur(10px);
 }
 .card-img-top {
     height: 160px;
@@ -134,8 +161,54 @@ body .card {
     flex-wrap: wrap;
     padding: 30px 0 10px 0;
 }
+.card-text {
+    display: flex;
+    grid-gap: 5px;
+    flex-wrap: wrap; 
+    margin-bottom: 30px;
+}
+.card-title {
+    margin-bottom: 1rem;
+}
+.btn.btn-light.genre{
+    padding: 2px 4px;
+    line-height: 2;
+    font-size: 12px;
+    background-color: #ffffff4d;
+    
+}
+.btn {
+    box-shadow: 0 4px 2px 0 rgb(86 86 92 / 5%);
+}
+.btn-trailer, .btn-trailer:hover {
+    color: #fff;
+    background-color: #ac18ffd6;
+    border-color: #a332e2;
+}
+.btn-trailer:hover {
+    background-color: #7018a3b6;
+}
+.btn-watch, .btn-watch:hover {
+    color: #fff;
+    background-color: #b12b96;
+    border-color: #b12b96;
+}
+.btn-watch:hover {
+    background-color: #ca14a6;
+}
+.fa-angle-double-down, .fa-heart {
+    font-size: 40px;
+    color: #ffffff5c;
+}
+.fa-heart {
+    font-size: 30px;
+    color: #ffffff34;
+}
 @media only screen and (max-width: 768px) {
     .heri-img.img-fluid {
         max-width:200px;
+    }
+    .body-wrapper {
+        height: 850vh;
     }
 }
