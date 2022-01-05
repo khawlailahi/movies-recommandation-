@@ -303,4 +303,7 @@ body .card {
     .body-wrapper {
         height: 860vh;
     }
+    .txt-hero-col h1{
+        font-size: 32px;
+    }
 }
